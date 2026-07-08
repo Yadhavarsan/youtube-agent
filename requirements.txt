@@ -1,0 +1,7 @@
+openai-whisper
+groq
+python-dotenv
+requests
+pillow
+ffmpeg-python
+tqdm
