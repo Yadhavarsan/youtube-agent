@@ -5,39 +5,32 @@ from utils import logger
 client = Groq(api_key=GROQ_API_KEY)
 
 
-def generate_thumbnail_prompts(title, transcript):
+def generate_script(topic):
 
-    logger.info("Generating thumbnail prompts...")
+    logger.info("Generating YouTube script...")
 
     prompt = f"""
-You are a professional YouTube thumbnail designer.
+You are an expert YouTube script writer.
 
-Create 3 different thumbnail prompts.
+Write a complete YouTube script.
 
-Video Title:
-{title}
+Topic:
 
-Transcript:
-{transcript[:1500]}
+{topic}
 
-Requirements:
+Requirements
 
-- Cinematic
-- Bright colors
-- High CTR
-- Modern YouTube style
-- No copyrighted characters
+- Catchy Hook
+- Strong Introduction
+- 5 Main Sections
+- Conclusion
+- Call To Action
 
-Return exactly like this:
+Length:
 
-PROMPT 1:
-...
+1200-1800 words.
 
-PROMPT 2:
-...
-
-PROMPT 3:
-...
+Return only the script.
 """
 
     response = client.chat.completions.create(
