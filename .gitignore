@@ -1,6 +1,24 @@
-.venv/
-.env
+# Python
 __pycache__/
 *.pyc
+.venv/
+
+# Environment
+.env
+
+# Logs
 logs/
+
+# Output
 output/
+
+# Credentials
+credentials/
+client_secret.json
+
+# VS Code
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
